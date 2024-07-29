@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/HTML,CSS, JS/HTML,CSS,JS Advanced/Homework/Homework08/Hw08ex02.css">
+</head>
+<body>
+    <!-- 2. Modal Popup
+Създайте модален прозорец(popup) при натискане на бутон show.
+Бележка: Създайте елемент с позиция absolute центриран в средата на страницата. След 
+което го скрийте с клас hide. При натискане на бутона show класа hide се премахва -->
+    <div id="container">
+        <button class="btn" id="showPopup" >Open</button>
+        <div id="popup" class="popup">
+            <img src="/HTML,CSS, JS/HTML,CSS,JS Advanced/images(Advanced)/404-tick.png" alt="">
+            <h2>Congrats</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae non possimus odio quidem placeat expedita maxime!</p>
+            <button  id="closePopup" >OK</button>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            $('#showPopup').click(function(){
+                $('#popup').addClass('openPopup');
+           
+            })
+            $('#closePopup').click(function(){
+                $('#popup').removeClass('openPopup');
+            })
+        })
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,62 @@
+        *{
+            box-sizing:border-box;
+            padding:0;
+            margin:0;
+        }
+        html,body{
+            background:#eee;
+        }
+        .header{
+            text-align: center;
+        }
+        h1{
+            margin-bottom:1.5rem;
+            margin-top:1.5rem;
+        }
+        .main{
+            background: url("/HTML,CSS,JS Advanced/task2/bg.png");
+            min-height:700px;
+            background-position: center center;
+            background-size: 100% 100%;
+        }
+        .container{
+            display:grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-auto-rows:15rem;
+            width: 80%;
+            margin:0 auto;
+            padding:5rem;
+            padding-top:9rem;
+        }
+        .box{
+            background-size: cover !important;
+            background-position: center center !important;
+            display:flex;
+            flex-direction:column;
+            justify-content: space-evenly;
+            align-items:center;
+            padding:2rem;
+            text-align: center;
+        }
+        .box i{
+            border:1px solid silver;
+            padding:1.5rem;
+            border-radius: 50%;
+            display:block;
+            margin-top:-0.6rem;
+            margin-bottom: 1rem;
+        }
+        .main .container .box:nth-child(1){
+            background:url("/HTML,CSS,JS Advanced/task2/5-1.jpg");
+        }
+        .main .container .box:nth-child(3){
+            background:url("/HTML,CSS,JS Advanced/task2/5-2.jpg");
+
+        }
+        .main .container .box:nth-child(5){
+            background:url("/HTML,CSS,JS Advanced/task2/5-3.jpg");
+
+        }
+        .box:nth-child(even){
+            background-color: white;
+        }

@@ -1,0 +1,45 @@
+body{
+    background-color: #474747;
+    text-align: center;
+}
+
+h1{
+    color:orange;
+    font-size:4rem;
+}
+
+input{
+    width:18rem;
+    height: 2rem;
+    font-size:1.5rem;
+    transition:0.5s;
+}
+
+input[type=text]:focus {
+background-color: orange;
+    color:#474747;
+}
+
+input[type=text]:focus {
+ border: 5px solid #555;
+}
+
+button{
+    border:unset;
+    color:#474747;
+    background-color: orange;
+    padding:8px 22px;
+    font-weight: bold;
+    transition:1s;
+}
+
+button:hover{
+    background-color: #474747;
+    color:orange;
+    transition-delay:0.1s;
+    transition-duration:0.7s;
+    opacity:0.7;
+    cursor:pointer;
+    transform:scale(1.2);
+    border:1.3px solid orange;
+}

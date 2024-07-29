@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 1</title>
+    <style>
+  
+        .form-table tr,td{
+
+            border:1px solid black;
+        }
+
+        .form-table ,input{
+            border:unset;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1. Login Form
+Създайте форма за вход с имейл и парола и бутон за вход
+Поставете следните валидации:
+- Първото текстово поле (имейл) трябва да е валиден имейл
+- Имейла трябва да е до 20 символа дължина
+- Паролата не трябва да е по – малко от 6 символа дължина
+- Двете полета са задължителни
+При натискане на бутона вход, ако правилата не са изпълнени се 
+визуализират грешки в страницата. -->
+
+<!--FIRST WAY-->
+
+    <div id="container">
+        <label for="">Email:</label>
+        <input type="text" id="emailInput"><br><br>
+        <span class="error" id="emailError"></span>
+
+        <label for="">Password:</label>
+        <input type="password" id="passwordInput">
+        <span class="error" id="passwordError"></span>
+
+        <button onclick="login()">Log in</button>
+    </div>
+
+
+    <script src="/HTML,CSS, JS/HTML,CSS,JS Advanced/Homework/Homework07/Hw07ex01.js">
+        //Logic for solving the problem:
+    </script> 
+
+<!--SECOND WAY-->
+
+
+    <!-- <div>
+        <label for="">Username:</label>
+        <input type="text" id="email">
+        <span class="error" id="email-error"></span>
+    </div>
+    <div>
+        <br>
+        <label for="">Password:</label>
+        <input type="text" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+        <span class="error" id="password-error"></span>
+    </div>
+    <br>
+    <button onclick="register()">Register</button>
+
+    <script>
+        function register(){
+            let emailEl = document.querySelector('#email');
+            let passwordEl = document.querySelector('#password');
+            let emailLength = emailEl.value.length;
+            let passwordLength = passwordEl.value.length;
+            let password = passwordEl.value;
+            let email = emailEl.value;
+            document.querySelector('#email-error').innerHTML = '';
+            document.querySelector('#password-error').innerHTML = '';
+            
+
+            if(emailLength > 20){
+                document.querySelector('#email-error').innerHTML = 'Invalid Input! Please enter something else!';
+                return;
+            }
+            if(passwordLength < 6 ){
+                document.querySelector('#password-error').innerHTML = 'Invalid Input! Please enter something else!';
+                return;
+            }
+            if(email == ''){
+                document.querySelector('#email-error').innerHTML = 'You need to input something in the field!';
+                return;
+            }
+            if(password == ''){
+                document.querySelector('#password-error').innerHTML = 'You need to input something in the field!';
+                return;
+            }
+            alert('Sent!');
+            
+        }
+        
+    </script> -->
+
+
+    <!--Structure-->
+
+    
+</body>
+</html>

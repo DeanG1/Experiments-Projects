@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --main-color:#ff7214;
+            --black-bg:#333;
+            --linear-gradient:linear-gradient(165deg,rgba(255,62,0,1)0%,rgba(255,194,51,1)100%);
+        }
+        body,html,p,h1,h2,h3,h4,h5,h6,ul,li{
+            padding:0;
+            margin:0;
+        }
+        body,html{
+            height:100%;
+        }
+        *{
+            box-sizing:border-box;
+
+        }
+        /*Navigation starts here*/
+        .nav{
+            z-index: 7;
+            display:flex;
+            background:#232323;
+            height:5rem;
+            align-items:center;
+            position:fixed;
+        }
+        .nav ul{
+            display:flex;
+            list-style-type: none;
+            width:80%;
+            justify-content: flex-end;
+            margin-right:5%;
+        }
+        .nav ul li{
+            min-width:7rem;
+        }
+        .nav ul li a {
+            color:white;
+            text-decoration:none;
+            text-transform:uppercase;
+        }
+        .nav ul li a:hover{
+            color:var(--main-color);
+        }
+        .nav .logo{
+            width:20%;
+            margin-left:5%;
+        }
+        .logo img{
+            width:100%;
+        }
+        /*Navigation ends here*/
+
+        /*OTHERS*/
+        .main-button{
+            align-self:center;
+            margin-top:1.2rem;
+            border:unset;
+            padding:12px 35px;
+            color:white;
+            font-weight:bold;
+            border-radius: 1rem;
+            text-shadow: 1px 1px 1px black;
+            letter-spacing: 3px;
+            background: var(--linear-gradient);
+        }
+        
+        .main-button:hover{
+            opacity: 0.7;
+            cursor: pointer;
+        }
+        .img-fluid{
+            width: 100%;
+            height: auto;
+        }
+        .w-100{
+            width: 100%;
+        }
+        /*OTHERS*/
+
+        /*MAIN START*/
+        .main{
+            padding-top:5rem;
+            background-color: var(--black-bg);
+            min-height:80%;
+            display:flex;
+            flex-direction:column;
+            justify-content: center;
+            text-align: center;
+            padding-bottom:5rem;
+        }
+        .m-intro, .m-after-intro{
+            color:white;
+            font-size:1.3rem;
+        }
+        .main h1{
+            color:white;
+            font-size:4rem;
+            padding:2rem;
+        }
+        /*MAIN ENDS*/
+
+        /*LATEST EVENT SECTION STARTS */
+        .latest-events{
+            padding:2rem;
+        }
+        .l-intro,.l-after-intro{
+            text-align: center;
+        }
+        .l-after-intro{
+            font-size:1.6rem;
+            font-weight:700;
+            padding:2rem;
+        }
+        .events-grid{
+            display:grid;
+            grid-template-columns: repeat(3,1fr);
+            gap:1rem;
+        }
+        .single-event{
+            position:relative;
+        }
+        .event-date{
+            background: var(--linear-gradient);
+            color:#fff;
+            font-size:1.5rem;
+            position:absolute;
+            top:1rem;
+            left:1rem;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            height: 5rem;
+            width: 5rem;
+        }
+
+        /*LATEST EVENT SECTION ENDS */
+
+        /*ABOUT US SECTION */
+        .about{
+            background-color: #f7f7f7;
+            display:grid;
+            grid-template-columns: repeat(6,1fr);
+            padding:7rem 2rem;
+            gap:1rem;
+            grid-auto-rows:15rem;
+        }
+        .a-box{
+            background-color: white;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align: center;
+            flex-direction:column;
+        }
+        .a-box div{
+            padding:1rem;
+        }
+        .a-box svg{
+            color:var(--main-color);
+            transition: transform 1s;
+
+        }
+        .a-box div:first-of-type{
+            font-weight: 700;
+        }
+        .a-box:nth-child(2){
+            grid-column: 3/4;
+            grid-row: 1;
+        }
+        .a-box:nth-child(3){
+            grid-column: 4/5;
+            grid-row: 1;
+        }
+        .a-box:nth-child(4){
+            grid-column: 5/6;
+            grid-row: 1;
+        }
+        .a-box:nth-child(5){
+            grid-column: 3/4;
+            grid-row: 2;
+        }
+        .a-box:nth-child(6){
+            grid-column: 4/5;
+            grid-row: 2;
+        }
+        .a-box:nth-child(7){
+            grid-column: 5/6;
+            grid-row: 2;
+        }
+        .a-box:hover{
+            background: var(--linear-gradient);
+            cursor:pointer;
+            color:white;
+        }
+        .a-box:hover svg{
+            color:white;
+            transform:scale(1.4)
+        }
+        .a-first{
+            background: transparent;
+            grid-column: 2/3;
+            grid-row:1/3;
+            justify-content: space-evenly;
+            align-items:flex-start;
+            padding:1rem;
+        }
+        .a-first:hover{
+            cursor: auto;
+            color:black;
+            background-color: unset;
+        }
+        .a-first h3
+        {
+            font-size:3rem;
+        }
+        .a-first div{
+            padding:0;
+        }
+        /*ABOUT US SECTION */
+
+        /*HOTELS SECTION*/
+        .hotels{
+            background-color: #333;
+            padding:2rem;
+            display:grid;
+            grid-template-columns: repeat(6,1fr);
+            
+        }
+        .h-list{
+            grid-column: 2/4;
+        }
+        .h-item{
+            display:flex;
+            border-bottom:1px solid silver;
+            padding:1rem;
+        }
+        .h-item:hover{
+            cursor:pointer;
+            background-color: rgba(231,167,67,0.5)
+        }
+        .h-img img{
+            width: 6rem;
+            height: 6rem;
+        }
+        .h-info{
+            color:white;
+            margin-left:1rem;
+        }
+        .h-info div{
+            padding:3px;
+        }
+    
+        .h-price{
+            color:rgb(255,166,0);
+        }
+        .h-review{
+            grid-column: 4/6;
+            background-position: center center;
+            background-size: cover;
+            background:url("/HTML,CSS,JS Advanced/images(Advanced)/e1.jpg");
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            position:relative;
+        }
+        .h-rating{
+            background-color: #84b408;
+            width:5rem;
+            height: 5rem;    
+            font-size:1.5rem;
+            text-align: center;
+            color: white;
+            position:absolute;
+            top:-0.5rem;
+            left:1rem;
+            padding:0.5rem;
+        }
+
+        /*HOTELS SECTION*/
+
+        /*MAP SECTION*/
+        .map{
+            position:relative;
+        }
+        .map iframe{
+            width:100%;
+        }
+        .map-overlay{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top:0;
+            background-color:rgba(0,0,0,0.3)
+        }
+        .map-info{
+            position:absolute;
+            top:4rem;
+            left:24%;
+            width: 7rem;
+            height:7rem;
+            background:var(--linear-gradient);
+            padding:1rem;
+            color:white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            z-index:2;
+        }
+        /*MAP SECTION*/
+
+        /*FOOTER SECTION*/
+        .footer{
+            background-color: #333;
+            display:grid;
+            grid-template-columns: repeat(12,1fr);
+            padding:5rem 2rem;
+            grid-auto-rows:15rem;
+        }
+        .f-box{
+            height: 18rem;
+        }
+        .f-box:nth-child(1){
+            grid-column: 3/5;
+            display:flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .f-box:nth-child(2){
+            grid-column: 6/8;
+        }
+        .f-box:nth-child(3){
+            grid-column: 9/11;
+        }
+        .f-box:nth-child(1) p{
+            color:silver;
+            font-size:1.2rem;
+        }
+        .f-location{
+            display: flex;
+            color:white;
+            flex-direction:row;
+            font-size:1.1rem;
+        }
+        .f-location span{
+            margin-left: 1rem;
+            font-size:0.7rem;
+        }
+  
+        .footer-menu{
+            padding:0;
+            margin:0;
+            list-style-type: none;
+        }
+        .footer-links-title{
+            color:white;
+            font-size:2rem;
+            margin-top:0.7rem;
+        }
+        .footer-menu li{
+            border-bottom: 1px solid silver;
+            margin-bottom:1.1rem;
+        }
+        .footer-menu a{
+            color:white;
+            text-decoration: none;
+        }
+        .footer-gallery{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-auto-rows:6rem;
+        }
+        .footer-gallery div{
+            background:url("/HTML,CSS,JS Advanced/images(Advanced)/e1.jpg");
+            height:100%;
+            width: 100%;
+            
+        }
+
+        /*FOOTER SECTION*/
+
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="logo">
+            <img src="/HTML,CSS,JS Advanced/images(Advanced)/logo.png" alt="">
+        </div>
+        <ul>
+            <li>
+                <a href="">Home</a>
+            </li>
+            
+            <li>
+                <a href="">About us</a>
+            </li>
+            
+            <li>
+                <a href="">Events</a>
+            </li>
+            
+            <li>
+                <a href="">Gallery</a>
+            </li>
+            
+            <li>
+                <a href="">Contacts</a>
+            </li>
+            
+            <li>
+                <a href="">Cotnact us</a>
+            </li>
+        </ul>
+    </div>
+    <!--MAIN CONTAINER STARTS-->
+    <div class="main">
+        <div class="m-intro">
+            ONE STOP
+        </div>
+        <h1>EVENT PLANNER</h1>
+        <div class="m-after-intro">
+            EVERY EVENT SHOULD BE PURFECT
+        </div>
+        <button class="main-button">GET STARTED</button>
+    </div>
+    <!--MAIN CONTAINER ENDS-->
+
+    <!--LATEST EVENTS STARTS-->
+    <div class="latest-events">
+        <div class="l-intro">UPCOMING EVENTS</div>
+        <div class="l-after-intro">LATEST AWESOME EVENTS</div>
+        <div class="events-grid">
+            <div class="single-event">
+                <img src="/HTML,CSS,JS Advanced/images(Advanced)/e1.jpg" class="img-fluid" alt="">
+                <div class="event-date">
+                    25<br>
+                    JUNE
+                </div>
+            </div>
+            <div class="single-event">
+                <img src="/HTML,CSS,JS Advanced/images(Advanced)/e1.jpg" class="img-fluid" alt="">
+                <div class="event-date">
+                    25<br>
+                    JUNE
+                </div>
+            </div>
+            <div class="single-event">
+                <img src="/HTML,CSS,JS Advanced/images(Advanced)/e1.jpg" class="img-fluid" alt="">
+                <div class="event-date">
+                    25<br>
+                    JUNE
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--LATEST EVENTS STARTS-->
+
+    <!--ABOUT SECTION STARTS-->
+    <div class="about">
+        <div class="a-box a-first">
+            <div>WE ARE DEVELOPPERS</div>
+            <h3>N1 EVENT MENAGEMENT</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum perspiciatis labore, et tenetur atque iusto iste adipisci? Dicta deleniti suscipit possimus eius non beatae reiciendis deserunt! Exercitationem, autem perspiciatis. Voluptate facere facilis quisquam distinctio molestiae.</p>
+            <button class="main-button w-100">About</button>
+        </div>
+        <div class="a-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="60" fill="currentColor" class="bi bi-balloon-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8.48 10.901C11.211 10.227 13 7.837 13 5A5 5 0 0 0 3 5c0 2.837 1.789 5.227 4.52 5.901l-.244.487a.25.25 0 1 0 .448.224l.04-.08c.009.17.024.315.051.45.068.344.208.622.448 1.102l.013.028c.212.422.182.85.05 1.246-.135.402-.366.751-.534 1.003a.25.25 0 0 0 .416.278l.004-.007c.166-.248.431-.646.588-1.115.16-.479.212-1.051-.076-1.629-.258-.515-.365-.732-.419-1.004a2.376 2.376 0 0 1-.037-.289l.008.017a.25.25 0 1 0 .448-.224l-.244-.487ZM4.352 3.356a4.004 4.004 0 0 1 3.15-2.325C7.774.997 8 1.224 8 1.5c0 .276-.226.496-.498.542-.95.162-1.749.78-2.173 1.617a.595.595 0 0 1-.52.341c-.346 0-.599-.329-.457-.644Z"/>
+              </svg>
+              <div>FRIEDLY TEAM</div>
+              <div>MORE THAN 200 TEAMS</div>
+        </div>
+        <div class="a-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="60" fill="currentColor" class="bi bi-balloon-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8.48 10.901C11.211 10.227 13 7.837 13 5A5 5 0 0 0 3 5c0 2.837 1.789 5.227 4.52 5.901l-.244.487a.25.25 0 1 0 .448.224l.04-.08c.009.17.024.315.051.45.068.344.208.622.448 1.102l.013.028c.212.422.182.85.05 1.246-.135.402-.366.751-.534 1.003a.25.25 0 0 0 .416.278l.004-.007c.166-.248.431-.646.588-1.115.16-.479.212-1.051-.076-1.629-.258-.515-.365-.732-.419-1.004a2.376 2.376 0 0 1-.037-.289l.008.017a.25.25 0 1 0 .448-.224l-.244-.487ZM4.352 3.356a4.004 4.004 0 0 1 3.15-2.325C7.774.997 8 1.224 8 1.5c0 .276-.226.496-.498.542-.95.162-1.749.78-2.173 1.617a.595.595 0 0 1-.52.341c-.346 0-.599-.329-.457-.644Z"/>
+              </svg>
+              <div>FRIEDLY TEAM</div>
+              <div>MORE THAN 200 TEAMS</div>
+        </div>
+        <div class="a-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="60" fill="currentColor" class="bi bi-balloon-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8.48 10.901C11.211 10.227 13 7.837 13 5A5 5 0 0 0 3 5c0 2.837 1.789 5.227 4.52 5.901l-.244.487a.25.25 0 1 0 .448.224l.04-.08c.009.17.024.315.051.45.068.344.208.622.448 1.102l.013.028c.212.422.182.85.05 1.246-.135.402-.366.751-.534 1.003a.25.25 0 0 0 .416.278l.004-.007c.166-.248.431-.646.588-1.115.16-.479.212-1.051-.076-1.629-.258-.515-.365-.732-.419-1.004a2.376 2.376 0 0 1-.037-.289l.008.017a.25.25 0 1 0 .448-.224l-.244-.487ZM4.352 3.356a4.004 4.004 0 0 1 3.15-2.325C7.774.997 8 1.224 8 1.5c0 .276-.226.496-.498.542-.95.162-1.749.78-2.173 1.617a.595.595 0 0 1-.52.341c-.346 0-.599-.329-.457-.644Z"/>
+              </svg>
+              <div>FRIEDLY TEAM</div>
+              <div>MORE THAN 200 TEAMS</div>
+        </div>
+        <div class="a-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="60" fill="currentColor" class="bi bi-balloon-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8.48 10.901C11.211 10.227 13 7.837 13 5A5 5 0 0 0 3 5c0 2.837 1.789 5.227 4.52 5.901l-.244.487a.25.25 0 1 0 .448.224l.04-.08c.009.17.024.315.051.45.068.344.208.622.448 1.102l.013.028c.212.422.182.85.05 1.246-.135.402-.366.751-.534 1.003a.25.25 0 0 0 .416.278l.004-.007c.166-.248.431-.646.588-1.115.16-.479.212-1.051-.076-1.629-.258-.515-.365-.732-.419-1.004a2.376 2.376 0 0 1-.037-.289l.008.017a.25.25 0 1 0 .448-.224l-.244-.487ZM4.352 3.356a4.004 4.004 0 0 1 3.15-2.325C7.774.997 8 1.224 8 1.5c0 .276-.226.496-.498.542-.95.162-1.749.78-2.173 1.617a.595.595 0 0 1-.52.341c-.346 0-.599-.329-.457-.644Z"/>
+              </svg>
+              <div>FRIEDLY TEAM</div>
+              <div>MORE THAN 200 TEAMS</div>
+        </div>
+        <div class="a-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="60" fill="currentColor" class="bi bi-balloon-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8.48 10.901C11.211 10.227 13 7.837 13 5A5 5 0 0 0 3 5c0 2.837 1.789 5.227 4.52 5.901l-.244.487a.25.25 0 1 0 .448.224l.04-.08c.009.17.024.315.051.45.068.344.208.622.448 1.102l.013.028c.212.422.182.85.05 1.246-.135.402-.366.751-.534 1.003a.25.25 0 0 0 .416.278l.004-.007c.166-.248.431-.646.588-1.115.16-.479.212-1.051-.076-1.629-.258-.515-.365-.732-.419-1.004a2.376 2.376 0 0 1-.037-.289l.008.017a.25.25 0 1 0 .448-.224l-.244-.487ZM4.352 3.356a4.004 4.004 0 0 1 3.15-2.325C7.774.997 8 1.224 8 1.5c0 .276-.226.496-.498.542-.95.162-1.749.78-2.173 1.617a.595.595 0 0 1-.52.341c-.346 0-.599-.329-.457-.644Z"/>
+              </svg>
+              <div>FRIEDLY TEAM</div>
+              <div>MORE THAN 200 TEAMS</div>
+        </div>
+        <div class="a-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="60" fill="currentColor" class="bi bi-balloon-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8.48 10.901C11.211 10.227 13 7.837 13 5A5 5 0 0 0 3 5c0 2.837 1.789 5.227 4.52 5.901l-.244.487a.25.25 0 1 0 .448.224l.04-.08c.009.17.024.315.051.45.068.344.208.622.448 1.102l.013.028c.212.422.182.85.05 1.246-.135.402-.366.751-.534 1.003a.25.25 0 0 0 .416.278l.004-.007c.166-.248.431-.646.588-1.115.16-.479.212-1.051-.076-1.629-.258-.515-.365-.732-.419-1.004a2.376 2.376 0 0 1-.037-.289l.008.017a.25.25 0 1 0 .448-.224l-.244-.487ZM4.352 3.356a4.004 4.004 0 0 1 3.15-2.325C7.774.997 8 1.224 8 1.5c0 .276-.226.496-.498.542-.95.162-1.749.78-2.173 1.617a.595.595 0 0 1-.52.341c-.346 0-.599-.329-.457-.644Z"/>
+              </svg>
+              <div>FRIEDLY TEAM</div>
+              <div>MORE THAN 200 TEAMS</div>
+        </div>
+
+    </div>
+    <!--ABOUT SECTION STARTS-->
+
+    <!--HOTELS SECTION-->
+    <div class="hotels">
+        <div class="h-list">
+            <div class="h-list-container">
+                <div class="h-item">
+                    <div class="h-img">
+                        <img src="/HTML,CSS,JS Advanced/images(Advanced)/e1.jpg" alt="">
+                    </div>
+                    <div class="h-info">
+                        <div><b>Hotel name</b></div>
+                        <div>Hotel information</div>
+                        <div class="h-price">Hotel price 50$/day</div>
+                    </div>
+                </div>
+                <div class="h-item">
+                    <div class="h-img">
+                        <img src="/HTML,CSS,JS Advanced/images(Advanced)/e1.jpg" alt="">
+
+                    </div>
+                    <div class="h-info">
+                        <div><b>Hotel name</b></div>
+                        <div>Hotel information</div>
+                        <div class="h-price">Hotel price 50$/day</div>
+                    </div>
+                </div>
+                <div class="h-item">
+                    <div class="h-img">
+                        <img src="/HTML,CSS,JS Advanced/images(Advanced)/e1.jpg" alt="">
+
+                    </div>
+                    <div class="h-info">
+                        <div><b>Hotel name</b></div>
+                        <div>Hotel information</div>
+                        <div class="h-price">Hotel price 50$/day</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="h-review">
+            <div class="h-rating">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                  </svg>
+                  <br/>
+                  5.0
+            </div>
+            <button class="main-button">PREVIEW</button>
+        </div>
+    </div>
+    <!--HOTELS SECTION-->
+    
+    <!--MAP SECTION-->
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5916.882378917459!2d24.740437494931587!3d42.1408448721867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14acd1b170b3e0d1%3A0xd800ca42c274b90f!2z0JzQvtGA0LDQtNC-INCx0LDRgCDQuCDQtNC40L3RitGA!5e0!3m2!1sbg!2sbg!4v1657363385619!5m2!1sbg!2sbg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="map-info">WE ARE HERE TO ANSWER YOUR QUESTIONS</div>
+        <div class="map-overlay"></div>
+    </div>
+    <!--MAP SECTION-->
+
+    <!--FOOTER-->
+    <div class="footer">
+        <div class="f-box">
+            <img src="/HTML,CSS,JS Advanced/images(Advanced)/logo.png" class="img-fluid" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores accusamus minus id animi optio voluptatem, consequuntur et deserunt.</p>
+            <div class="f-location">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                  </svg>
+                  <span>
+                    PLOVDIV BULGARIA , SINGING FOUNTAINS
+                  </span>
+            </div>
+        </div>
+        <div class="f-box">
+            <div class="footer-links-title">Useful Links</div>
+            <ul class="footer-menu">
+                <li>
+                    <a href="">About</a>
+                </li>
+                
+                <li>
+                    <a href="">About</a>
+                </li>
+                
+                <li>
+                    <a href="">About</a>
+                </li>
+                
+                <li>
+                    <a href="">About</a>
+                </li>
+                
+                <li>
+                    <a href="">About</a>
+                </li>
+                
+                <li>
+                    <a href="">About</a>
+                </li>
+            </ul>
+        </div>
+        <div class="f-box">
+            <div class="footer-links-title">Gallery</div>
+            <div class="footer-gallery">
+                <div>
+                    <img src="/HTML,CSS,JS Advanced/images(Advanced)/e1.jpg" alt="">
+                </div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+    </div>
+    <!--FOOTER-->
+
+</body>
+</html>

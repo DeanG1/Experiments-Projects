@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        :root{
+            --border-radius:1.5rem;
+        }
+        *{
+            box-sizing:border-box;
+        }
+        html,body, ul{
+            padding:0;
+            margin:0;
+        }
+        body{
+            background-color: #eee;
+        }
+        .pricing-table{
+            display: flex;
+            justify-content: space-between;
+            width: 70%;
+            margin:4rem auto;
+        }
+        .box{
+            width:30%;
+            min-height: 26rem;
+            box-shadow:0px 0px 3px black;
+            border-radius: var(--border-radius);
+        }
+        .header{
+            color:white;
+            position:relative;
+            min-height:80%;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+            background:linear-gradient(to right, #b76cd4, #4c3bb7);
+        }
+        .recomended{
+            background-color: #fff;
+            position:absolute;
+            color:black;
+            top:2.1rem;
+            left:-2.5%;
+            box-shadow: 0px 0px 3px black;
+            width: 105%;
+            text-align: center;
+            border-radius:2px;
+            padding:4px;
+        }
+        .title{
+            text-align: center;
+            font-size:1.1rem;
+            font-weight:bold;
+            padding-top:5rem;
+            letter-spacing:0.3rem;
+        }
+        .pricing-table li{
+            list-style-type:none;
+            margin-top:1rem;
+            margin-left:2.5rem;
+        }
+        .price{
+            text-align:center;
+            padding:1rem;
+            font-size:2rem;
+        }
+        .per-month{
+            font-size:1rem;
+        }
+        .footer{
+            text-align:center;
+            background-color: white;
+            min-height: 20%;
+            border-radius: 0 0 var(--border-radius) var(--border-radius);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .pricing-btn{
+            border:unset;
+            padding:12px 20px;
+            width: 9rem;
+            background:linear-gradient(to right, #b76cd4, #4c3bb7);
+            color:white;
+            border-radius: var(--border-radius);
+        }
+        .box:hover{
+            transform:scale(1.1);
+            transition-duration: 0.5s;
+        }
+        @media(max-width:1200px){
+            html{
+                font-size:14px;
+            }
+            .pricing-table{
+                width:90%;
+                flex-wrap:wrap;
+                justify-content: center;
+            }
+            .box{
+                width: calc(45%-2rem);
+                margin-top:2rem;
+                margin-left: 2rem;
+            }
+        }
+        @media(max-width:768px){
+            html{
+                font-size:20px;
+            }
+            .pricing-table{
+                width: 80%;
+                margin-top:0;
+            }
+            .box{
+                width: 100%;
+                margin-top:4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="pricing-table">
+        <div class="box">
+            <div class="header">
+                <div class="title">
+                    MID
+                </div>
+                <div class="price">
+                    15$ <span class="per-month">per month</span>
+                </div>
+                <ul>
+                    <li><i class="fa fa-check"></i>20 GB storage!</li>
+                    <li><i class="fa fa-check"></i>20 GB storage!</li>
+                    <li><i class="fa fa-check"></i>20 GB storage!</li>
+                </ul>
+            </div>
+            <div class="footer">
+                <button class="pricing-btn">Buy now!</button>
+            </div>
+        </div>
+        <div class="box">
+            <div class="header">
+                <div class="recomended">RECOMENDED</div>
+                <div class="title">
+                    BASIC
+                </div>
+                <div class="price">
+                    15$ <span class="per-month">per month</span>
+                </div>
+                <ul>
+                    <li><i class="fa fa-check"></i>20 GB storage!</li>
+                    <li><i class="fa fa-check"></i>40 GB Bandwith!</li>
+                    <li><i class="fa fa-check"></i>1 Domain</li>
+                </ul>
+            </div>
+            <div class="footer">
+                <button class="pricing-btn">Buy now!</button>
+            </div>
+        </div>
+        <div class="box">
+            <div class="header">
+                <div class="title">
+                    ADVANCED
+                </div>
+                <div class="price">
+                    15$ <span class="per-month">per month</span>
+                </div>
+                <ul>
+                    <li><i class="fa fa-check"></i>20 GB storage!</li>
+                    <li><i class="fa fa-check"></i>20 GB storage!</li>
+                    <li><i class="fa fa-check"></i>20 GB storage!</li>
+                </ul>
+            </div>
+            <div class="footer">
+                <button class="pricing-btn">Buy now!</button>
+            </div>
+        </div>
+    </div>
+        
+
+</body>
+</html>

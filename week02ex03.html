@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --main-color:#3e1608;
+        }
+        h2,p{
+            padding:0;
+            margin:0;
+        }
+        .container{
+            display:grid;
+            grid-auto-rows: 10rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap:0 1rem;
+        }
+        .box{
+            background-size:cover !important;
+            background-position: center center !important;
+        }
+        .box1{
+            grid-column:1;
+            grid-row:1/4;
+            background: url("/HTML,CSS,JS Advanced/images/task3/g1.jpg");
+        }
+        .box2{
+            color:white;
+            grid-column: 1;
+            text-align: center;
+            background-color: var(--main-color);
+        }
+        .box2 div, .box3 div{
+            display: flex;
+            flex-direction:column;
+            height: 100%;
+            justify-content: space-evenly;
+        }
+        .box3{
+            color:white;
+            grid-row:1;
+            text-align: center;
+            background-color: var(--main-color);
+        }
+        .box4{
+            grid-row:2/5;
+            background: url("/HTML,CSS,JS Advanced/images/task3/g2.jpg");
+        }
+        .box5{
+            grid-row:1/4;
+        }
+        .box5 div{
+            display: flex;
+            flex-direction:column;
+            justify-content: space-between;
+            height: 90%;
+        }
+        .box5 button{
+            align-self: flex-start;
+            border:unset;
+            padding:10px 18px;
+            background: var(--main-color);
+            color:white;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1"></div>
+        <div class="box box2">
+            <div>
+                <h2>Lorem, ipsum dolor.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Voluptatibus quidem labore error tenetur omnis soluta corporis repudiandae provident magnam esse.
+                </p>
+            </div>
+        </div>
+        <div class="box box3">
+            <div>
+                <h2>Lorem, ipsum dolor.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Voluptatibus quidem labore error tenetur omnis soluta corporis repudiandae provident magnam esse.
+                </p>
+            </div>
+        </div>
+        <div class="box box4"></div>
+        <div class="box box5">
+            <div>
+                <p>
+                    <b>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia consequuntur temporibus optio. Fuga, blanditiis dolores. 
+                        Voluptatibus quidem labore error tenetur omnis soluta corporis repudiandae provident magnam esse.
+                    </b>
+                </p>
+                <p>
+                    <i>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, ipsam mollitia optio quisquam voluptatem eum!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Voluptatibus quidem labore error tenetur omnis soluta corporis repudiandae provident magnam esse.
+                    </i>
+                </p>
+                <p>
+                    <i>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, voluptate voluptas amet illo reprehenderit voluptatum!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Voluptatibus quidem labore error tenetur omnis soluta corporis repudiandae provident magnam esse.
+                    </i>
+                </p>
+                <button>
+                    Learn more
+                </button>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

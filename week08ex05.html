@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- <p id="text">
+        Lorem ipsum dolor sit amet.
+    </p>
+    <button id="btn">Hide</button>
+    <button id="show">Show</button>
+    <button id="toggle">Toggle</button> -->
+
+    <div id="subject">
+        Hello there you can hide me if you want!
+    </div>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <button id="toggle">Toggle</button>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- <script>
+        $(function(){
+            $('#btn').click(function()
+            {
+                $('#text').addClass('hide');
+            })
+            $('#show').click(function(){
+                $('#text').removeClass('hide');
+            })
+            $('#toggle').click(function(){
+                $('#text').toggleClass('hide');
+            })
+        })
+    </script> -->
+
+
+    <script>
+        $(function(){
+            $('#hide').click(function(){
+                $('#subject').addClass('hide');
+            })
+            $('#show').click(function(){
+                $('#subject').removeClass('hide');
+            })
+            $('#toggle').click(function(){
+                $('#subject').toggleClass('hide');
+            })
+        })
+    </script>
+</body>
+</html>
